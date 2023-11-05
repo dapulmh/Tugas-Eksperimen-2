@@ -20,8 +20,6 @@ reversed_big = np.arange(2**16, 0, -1)
 
 # function untuk menghitung running time
 
-penerapan_input = [10, 7, 9, 2, 5, 1, 8, 3]
-
 
 def calculate_running_time(func):
     def wrapper(*args, **kwargs):
