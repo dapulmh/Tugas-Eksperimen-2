@@ -7,69 +7,8 @@ import java.util.Random;
 import java.util.HashMap;
 import java.util.Map;
 
-class KnapsackItem {
-    int weight;
-    int value;
-
-    public KnapsackItem(int weight, int value) {
-        this.weight = weight;
-        this.value = value;
-    }
-}
-
 public class UnboundedKnapsackTE {
     private static final long SEED = 42;
-    // private static int maxProfit;
-
-    // public static int knapsack(int capacity, int[] weights, int[] values) {
-    // KnapsackItem[] items = new KnapsackItem[weights.length];
-    // for (int i = 0; i < weights.length; i++) {
-    // items[i] = new KnapsackItem(weights[i], values[i]);
-    // }
-
-    // Arrays.sort(items, (a, b) -> Double.compare((double) b.value / b.weight,
-    // (double) a.value / a.weight));
-    // int n = items.length;
-    // int[] currentItems = new int[n];
-    // int[] currentWeight = new int[n];
-    // int[] currentValue = new int[n];
-    // maxProfit = 0;
-
-    // branchAndBound(0, 0, 0, capacity, items, currentItems, currentWeight,
-    // currentValue);
-
-    // return maxProfit;
-    // }
-
-    // private static void branchAndBound(int level, int currentWeight, int
-    // currentValue, int capacity,
-    // KnapsackItem[] items, int[] currentItems, int[] currentWeightArray,
-    // int[] currentValueArray) {
-    // if (currentWeight <= capacity && currentValue > maxProfit) {
-    // maxProfit = currentValue;
-    // }
-
-    // if (level == items.length) {
-    // return;
-    // }
-
-    // // Include the item at the current level
-    // currentItems[level] = 1;
-    // currentWeightArray[level] = currentWeight + items[level].weight;
-    // currentValueArray[level] = currentValue + items[level].value;
-
-    // branchAndBound(level + 1, currentWeightArray[level],
-    // currentValueArray[level], capacity,
-    // items, currentItems, currentWeightArray, currentValueArray);
-
-    // // Exclude the item at the current level
-    // currentItems[level] = 0;
-    // currentWeightArray[level] = currentWeight;
-    // currentValueArray[level] = currentValue;
-
-    // branchAndBound(level + 1, currentWeight, currentValue, capacity,
-    // items, currentItems, currentWeightArray, currentValueArray);
-    // }
 
     static int max(int a, int b) {
         return (a > b) ? a : b;
