@@ -321,8 +321,6 @@ public class UnboundedKnapsackTE {
         int[] weightsBig = generateInputWeight(10000);
         int[] valuesBig = generateInputValue(10000);
 
-        int[] arr1 = { 1, 30, 50 };
-        int[] arr2 = { 1, 50, 100 };
         // runtimeCalculatorDP(100, 3, arr1, arr2);
         // System.out.println(unboundedKnapsack(100, 3, arr1, arr2));
         // int W = 100;
@@ -335,12 +333,15 @@ public class UnboundedKnapsackTE {
         // runtimeCalculatorBnB(weightsSmall, valuesSmall, W);
         // runtimeCalculatorDP(W, n, valuesBig, weightsBig);
 
-        int[] weights = { 2, 5, 10, 5 };
-        int[] values = { 40, 30, 50, 10 };
-        int capacity = 16;
         int W = 1000;
-        // int n = weightsMedium.length;
-        runtimeCalculatorBnB(weights, values, capacity);
-        // runtimeCalculatorDP(W, n, valuesBig, weightsBig);
+        int n = valuesBig.length;
+        runtimeCalculatorBnB(weightsBig, valuesBig, W);
+        runtimeCalculatorDP(W, n, valuesBig, weightsBig);
+
+        // // demonstrasi
+        // int[] arr1 = { 1, 30, 50 };
+        // int[] arr2 = { 3, 50, 100 };
+        // int capacity = 150;
+        // runtimeCalculatorBnB(arr1, arr2, capacity);
     }
 }
